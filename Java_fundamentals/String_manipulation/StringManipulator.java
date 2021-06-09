@@ -58,13 +58,13 @@ import java.io.*;
   public class StringManipulator {
 
  public static String concatSubstring (String str1 , int in1, int in2 , String str2){
-     return str1.charAt(in1)+str2;
+     return str1.substring(in1, in2)+str2;
  }
  public static void main ( String[] args){ 
 
  
 StringManipulator manipulator = new StringManipulator();
-String word = manipulator.concatSubstring("Hello", 1, 2, "world");
+String word = manipulator.concatSubstring("Hello", 1, 3, "world");
 System.out.println(word); // eworld
 }
 }
