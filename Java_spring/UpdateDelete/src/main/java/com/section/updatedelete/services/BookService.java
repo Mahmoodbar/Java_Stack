@@ -3,6 +3,8 @@ package com.section.updatedelete.services;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 //...
 import org.springframework.stereotype.Service;
 
@@ -36,4 +38,12 @@ private final BookRepository bookRepository;
          return null;
      }
  }
+ public void deleteBook(Long id) {
+     bookRepository.deleteById(id);
+ }
+ 
+ public Book updateBook(Book book) {
+ 	 return bookRepository.save(book);
+}
+
 }
